@@ -25,6 +25,10 @@ public class ClassUtil {
         return Thread.currentThread().getContextClassLoader();
     }
 
+    public static Class<?> loadClass(String className){
+        return loadClass(className,true);
+    }
+
     public static Class<?> loadClass(String className,boolean isInitialized){
         Class<?> cls = null;
         try {
