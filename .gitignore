@@ -25,3 +25,5 @@ hs_err_pid*
 
 /SmartFramework.iml
 /.idea/
+/target/
+.DS_Store

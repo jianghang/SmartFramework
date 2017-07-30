@@ -24,4 +24,9 @@ public class StringUtil {
     public static String[] splitString(String str,String separator){
         return StringUtils.splitByWholeSeparator(str,separator);
     }
+
+    public static void main(String[] args){
+        Runnable r = () -> System.out.println("hello");
+        new Thread(r).start();
+    }
 }
