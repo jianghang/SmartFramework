@@ -2,11 +2,10 @@ package com.hangjiang.framework.helper;
 
 import com.hangjiang.framework.annotation.Inject;
 import com.hangjiang.framework.util.ReflectionUtil;
-import org.apache.commons.collections4.CollectionUtils;
+import org.apache.commons.collections4.MapUtils;
 import org.apache.commons.lang3.ArrayUtils;
 
 import java.lang.reflect.Field;
-import java.util.Collection;
 import java.util.Map;
 
 /**
@@ -16,7 +15,7 @@ public final class IocHelper {
 
     static {
         Map<Class<?>,Object> beanMap = BeanHelper.getBeanMap();
-        if(CollectionUtils.isNotEmpty((Collection<?>) beanMap)){
+        if(MapUtils.isNotEmpty(beanMap)){
             for (Map.Entry<Class<?>,Object> beanEntry : beanMap.entrySet()){
                 Class<?> beanClass = beanEntry.getKey();
                 Object beanInstance = beanEntry.getValue();
